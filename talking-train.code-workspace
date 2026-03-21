@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "path": "talking-train",
+      "name": "📁 talking-train (MicroPython Studio)"
+    }
+  ],
+  "settings": {
+    "micropythonStudio.project": true,
+    "micropythonStudio.targetMCU": "esp32",
+    "micropythonStudio.language": "Micropython"
+  }
+}
