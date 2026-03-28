@@ -15,3 +15,12 @@ Code in /software - these scripts are in MicroPython and target the ESP32 microc
 - Loads stations and displays them in order on the OLED screen
 - Audio playback (semi-finished)
 - Line creation tool
+
+## TODO
+- setup audio for station-by-station announcements
+- design physical layout for components
+
+## Reference materials
+- https://macsbug.wordpress.com/2021/02/19/web-radio-of-m5stack-pcm5102a-i2s-dac/ for DAC schematic
+- https://documentation.espressif.com/esp32-c3_datasheet_en.pdf for ESP32-C3 datasheet
+- https://www.ti.com/lit/ds/symlink/tpa6132a2.pdf, especially Figure 24, for amplifier datasheet and schematic
