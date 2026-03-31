@@ -10,15 +10,13 @@ Code in /software - these scripts are in MicroPython and target the ESP32 microc
 - PCM5102 Digital I²S Audio Decoder DAC PCB 
 - SSD1306 128x64
 - ESP32
+- Check Bill of Materials file for all parts
 
 ## Features
 - Loads stations and displays them in order on the OLED screen
 - Audio playback (semi-finished)
 - Line creation tool
-
-## TODO
-- setup audio for station-by-station announcements
-- design physical layout for components
+- Audio playback support
 
 ## Reference materials
 - https://macsbug.wordpress.com/2021/02/19/web-radio-of-m5stack-pcm5102a-i2s-dac/ for DAC schematic

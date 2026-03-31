@@ -1,0 +1,4 @@
+# Audio files from trains can be proprietary. Get them here https://github.com/davwheat/rail-announcements/tree/main (or record your own)
+*.wav
+# Same goes for these, wouldn't be useful
+*.lnfile

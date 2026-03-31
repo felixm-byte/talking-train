@@ -13,6 +13,7 @@ i2c = I2C(0, scl=Pin(22), sda=Pin(21))
 oled_width = 128
 oled_height = 64
 oled = ssd1306.SSD1306_I2C(oled_width, oled_height, i2c)
+audio_playing = False
 
 if audio_enabled: #configure audio pinout and settings if audio is in use
     SCK_PIN = 32
@@ -28,6 +29,8 @@ sd = SDCard(slot=2)  #ESP£2 pins used: sck=18, mosi=23, miso=19, cs=5
 os.mount(sd, "/sd")
 
 def play_audio(filepath):
+    global audio_playing
+    audio_playing = True
     wav = open(filepath, 'rb') #rb used for reading binary file format
     _ = wav.seek(44) # advances to first data piece, after metadata/headers
     wav_samples = bytearray(10000)
@@ -46,15 +49,16 @@ def play_audio(filepath):
     except Exception as e:
         print(f"Error occured while playing {filepath}")
         print(f"Error details: {e}")
+    audio_playing = False
     
 
 
 
 def get_line_data(line_name):
     try: 
-        file = open(f"{line_name}.txt", 'r')
+        file = open(f"{line_name}.lnfile", 'r')
     except Exception:
-        file = open(f"jubilee_line.txt", 'r')
+        file = open(f"jubilee_line.lnfile", 'r')
 
     txt = file.read()
     data = txt.split("\n")
@@ -65,30 +69,52 @@ def get_line_data(line_name):
 
 def display_line(line_name):
     global audio_enabled
-    line = get_line_data("felix")
-    try:
-        wav_file = f"/sd/{line_name}_starting.wav"
-        play_audio(wav_file)
-    except Exception:
-        audio_enabled = False
+    global audio_playing
+    line = get_line_data(line_name)
 
     for stop in line[2]:
         #data is displayed by the oled.text(a,b,c, d) function 
         #a: text, b: x-coord (width is 128), c: y-coord (height is 64), d: colour option (int)
+
         oled.text(f"{line[0]} line", 0, 0, 1)#this model only has one colour, this i
         oled.text(f"To: {line[1]}", 0, 15,1)
-        oled.text(f"Calling at:", 0, 30,1)     
         oled.text(f"{stop}", 0, 45, 1)   
         oled.show()
-        if switch_button.value() == 0:
-            break
+        #play 1st part of announcement
+        try:
+            for audio in line[3]:
+                if audio[0] == "*":
+                    time.sleep(float(audio[1:]))
+                else:
+                    play_audio(f"{audio}.wav")
+                    audio_playing = True
+                    while audio_playing:
+                        time.sleep(0.01)
+        except:
+            pass
+        #play next part of announcement, station name
+        try:
+            play_audio(f"{stop}.wav")
+            audio_playing = True
+            while audio_playing:
+                time.sleep(0.01)
+        except:
+            pass
+        #play final part of announcement
+        try:
+            for audio in line[4s]:
+                if audio[0] == "*":
+                    time.sleep(float(audio[1:]))
+                else:
+                    play_audio(f"{audio}.wav")
+                    audio_playing = True
+                    while audio_playing:
+                        time.sleep(0.01)
+        except:
+            pass        
         time.sleep(5)
         oled.fill(0)
     
-
-while True:
-    print(switch_button.value())
-    time.sleep(0.1)
 #oled.fill(0)
 #oled.text("Display complete.", 0,0,1)
 #oled.text("Turn off and on to go again.", 0,25,1)
