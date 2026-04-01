@@ -23,6 +23,9 @@ Code in /software - these scripts are in MicroPython and target the ESP32 microc
 - hardware/Gerber_V1 is the Gerber file for PCB production
 - software/ contains the line creation tool and the software for the ESP32 to run.
 
+## Assembly
+- The parts of the model clip together. Once you have all parts and everything soldered onto the board, drop the main train model piece into the base, then drop the PCB into the gap in the main train model, with the I/O facing towards the outside of the model, and then drop the roof piece on top. The model needs wired power and audio so will not be able to be moved while operating, but if you have to move it make sure to support from the bottom when lifting.
+
 ## Graphics
 ![visualisation of a PCB](https://github.com/felixm-byte/talking-train/blob/main/schematic.png?raw=true)
 ![visualisation of a PCB](https://github.com/felixm-byte/talking-train/blob/main/pcb_visual.png?raw=true)
