@@ -6,10 +6,8 @@ Hardware files in /hardware - the .model file is for Asset Forge, which I am usi
 Code in /software - these scripts are in MicroPython and target the ESP32 microcontroller, expecting a 128x64 SSD1306 I2C OLED display and an [I2S audio output device](https://github.com/miketeachman/micropython-i2s-examples)
 
 ## Part examples
-- PCM5102 Digital I²S Audio Decoder DAC PCB 
-- SSD1306 128x64
-- ESP32
-- Check Bill of Materials file for all parts
+- SSD1306 128x64 display: https://www.aliexpress.com/item/1005007551771400.html
+- Check Bill of Materials file for all other parts, these have LSCS part numbers for ease of ordering
 
 ## Features
 - Loads stations and displays them in order on the OLED screen
@@ -19,7 +17,7 @@ Code in /software - these scripts are in MicroPython and target the ESP32 microc
 
 ## Key files
 - hardware/working-model.stl is the final 3D model - you can upload this straight to JLC3DP and print out
-- hardware/BOM.xlsx is the bill of materials
+- hardware/BOM.xlsx is the bill of materials, upload this to LSCS.com to order all.
 - hardware/Gerber_V1 is the Gerber file for PCB production
 - software/ contains the line creation tool and the software for the ESP32 to run.
 
