@@ -1,6 +1,6 @@
 # talking-train
 A model train with announcements for train stops
-
+![poster describing features of the talking train, with a features list and 3D model resembling a London Underground train](https://github.com/felixm-byte/talking-train/blob/main/poster.png?raw=true)
 ## File structure
 Hardware files in /hardware - the .model file is for Asset Forge, which I am using to create the 3D models
 
@@ -14,7 +14,7 @@ Code in /software - these scripts are in MicroPython and target the ESP32 microc
 
 ## Features
 - Loads stations and displays them in order on the OLED screen
-- Audio playback (semi-finished)
+- Audio playback with hi-res audio
 - Line creation tool
 - Audio playback support
 
