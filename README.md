@@ -1,5 +1,5 @@
 # talking-train
-![poster describing features of the talking train, with a features list and 3D model resembling a London Underground train](https://github.com/felixm-byte/talking-train/blob/main/docs/imagesposter.png?raw=true)
+![poster describing features of the talking train, with a features list and 3D model resembling a London Underground train](https://github.com/felixm-byte/talking-train/blob/main/docs/images/poster.png?raw=true)
 
 ## File structure
 - Please ignore /hardware/old-design, for reference only
@@ -32,9 +32,9 @@ The pieces used for mounting the top half of the model:
 Fit into these holes on the bottom part of the model.
 ![alt text](docs/images/bottom_piece.png)
 ## Graphics
-![visualisation of a PCB](https://github.com/felixm-byte/talking-train/blob/main/docs/imagesschematic.png?raw=true)
-![visualisation of a PCB](https://github.com/felixm-byte/talking-train/blob/main/docs/imagespcb_visual.png?raw=true)
-![visualisation of a PCB](https://github.com/felixm-byte/talking-train/blob/main/docs/imagespcb_visual2.png?raw=true)
+![visualisation of a PCB](https://github.com/felixm-byte/talking-train/blob/main/docs/images/schematic.png?raw=true)
+![visualisation of a PCB](https://github.com/felixm-byte/talking-train/blob/main/docs/images/pcb_visual.png?raw=true)
+![visualisation of a PCB](https://github.com/felixm-byte/talking-train/blob/main/docs/images/pcb_visual2.png?raw=true)
 
 ## Reference materials
 - https://macsbug.wordpress.com/2021/02/19/web-radio-of-m5stack-pcm5102a-i2s-dac/ for DAC schematic
