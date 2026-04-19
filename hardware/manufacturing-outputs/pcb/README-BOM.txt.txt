@@ -1,0 +1,1 @@
+Access a digital BOM with guidance on part placement on my website at https://felix.ink/ttrain1. This has been excluded from the repo to minimise filesize.
