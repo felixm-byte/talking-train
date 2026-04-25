@@ -1,6 +1,8 @@
 # talking-train
 ![poster describing features of the talking train, with a features list and 3D model resembling a London Underground train](https://github.com/felixm-byte/talking-train/blob/main/docs/images/poster.png?raw=true)
 
+This is a bit of an odd concept, but I want to make a talking model train for my grandparents to remind them of their times visiting us, since they are too old to ever make the 19,000 km journey from New Zealand to England. Every time I call them from the train, they light up at the familiarity of the announcements when they hear them and get super nostalgic, which makes me think it would be nice—and a cool souvenir—to let them hear them whenever they like. Technically, I think it would be a cool project, since I’ve never made something with a physical interface, or really made something with hardware, and I would love to learn. Most of what I build would be applicable to other countries, so I think it would be something lots of people would like.
+
 ## File structure
 - Please ignore /hardware/old-design, for reference only
 - Manufacturing files in hardware/manufacturing-outputs/...
@@ -8,7 +10,7 @@
 ## Part examples
 - SSD1306 128x64 display: https://www.aliexpress.com/item/1005007551771400.html
 - Check Bill of Materials file for all other parts, these have LSCS part numbers for ease of ordering
-- 4x M2 screws with nuts, 1cm length
+- 4x M2 screws with nuts, 1.4cm length - https://www.aliexpress.com/item/1005006328031034.html (M2x14mm needed)
 
 ## Features
 - Loads stations and displays them in order on the OLED screen
@@ -53,10 +55,10 @@ The pieces used for mounting the top half of the model:
 Fit into these holes on the bottom part of the model.
 ![render of bottom piece](docs/images/bottom_piece.png)
 ## Graphics
-![visualisation of a PCB](https://github.com/felixm-byte/talking-train/blob/main/docs/images/schematic.png?raw=true)
-![visualisation of a PCB](https://github.com/felixm-byte/talking-train/blob/main/docs/images/pcb_visual.png?raw=true)
-![visualisation of a PCB](https://github.com/felixm-byte/talking-train/blob/main/docs/images/pcb_visual2.png?raw=true)
-![visualisation of a PCB](https://github.com/felixm-byte/talking-train/blob/main/docs/images/pcb_visual3.png?raw=true)
+![schematic](https://github.com/felixm-byte/talking-train/blob/main/docs/images/schematic.png?raw=true)
+![PCB diagram (wiring)](https://github.com/felixm-byte/talking-train/blob/main/docs/images/pcb_visual.png?raw=true)
+![PCB render](https://github.com/felixm-byte/talking-train/blob/main/docs/images/pcb_visual2.png?raw=true) - old PCB, for shape reference only
+![PCB render](https://github.com/felixm-byte/talking-train/blob/main/docs/images/pcb_visual3.png?raw=true)- old PCB, for shape reference only
 ## Reference materials
 - https://macsbug.wordpress.com/2021/02/19/web-radio-of-m5stack-pcm5102a-i2s-dac/ for DAC schematic
 - https://documentation.espressif.com/esp32-c3_datasheet_en.pdf for ESP32-C3 datasheet
