@@ -19,15 +19,33 @@
 ## Key files
 - hardware/manufacturing-outputs/ contains the files (.stl, pick and place, gerber, BOM) needed to produce the finished product, with the 3D files for the case in manufacturing-outputs/3d/ and the PCB in manufacturing-outputs/pcb/ 
 - Source files like the EasyEDA (.epro) file and the 3D model of the PCB (only really necessary for designing a new case) is in hardware/source-files
-- Use [the onshape file](https://cad.onshape.com/documents/c1f604bc7dcb19d0034320b9/w/e582f7a5ec8be5c9c5e2ed68/e/27ea5781da26a9e15f82bfe8?renderMode=0&uiState=69e37fad07cea94ea421e9c8) onshape for the case 3D source, and access an interactive bom on [my website](https://felix.ink/ttrain1)
+- Use [the onshape file](https://cad.onshape.com/documents/c1f604bc7dcb19d0034320b9/w/e582f7a5ec8be5c9c5e2ed68/e/27ea5781da26a9e15f82bfe8?renderMode=0&uiState=69ecb3f7b8b8dff4899cd660) onshape for the case 3D source, and access an interactive bom on [my website](https://felix.ink/ttrain1)
 - software/ contains the line creation tool and the software for the ESP32 to run.
 
 
 ## Assembly
 - Assemble the PCB outside of the case by soldering on the parts. Do not attach the display at this stage. 
 - To protect from the unlikely event of soldering error, do not plug the usb-c port directly into an important device: plug into a wall outlet first and check if the power LED is active. If not, I recommend stopping using the device.
-- Then, attach the screen to the header, ensuring to align the parts such that all pins are connected to the header, and the display rests above the PCB. With the PCB aligned with the header on the left, the bottom pin-hole is for 'GND' and this should be connected to the leftmost pin 'GND' of the display.
-- The parts of the model clip together. Once you have all parts soldered onto the board and attached to the board, screw the PCB into the 4 holes on the board, with the nuts on the outside of the board. Then, use the mounting clips and holes to align the 2 parts of the 3D model, and lower the pin side into the hole.
+- Place this 3D printed piece flat on an assembly bench.
+![part with round screw holes pointing out](docs/assembly/a1.png)
+- Place the PCB onto the round pieces that poke out, which are used to seperate it from the case. Make sure it is in this alignment and that the screwholes line up.
+![PCB aligned with scewholes](docs/assembly/a2.png)
+- Then, insert the screws into the screwholes as shown in the graphic, taking care not to poke the board components.
+
+![Inserting screws](docs/assembly/a3.png)
+- Rotate the model so that it sits with the side of the train on the desk and the top of the train facing upwards. Turn the nut around the screw to secure the PCB.
+
+![Securing with nuts](docs/assembly/a4.png)
+- Next, return the PCB to the original orientation, with the side of the model the PCB is attached to, resting on the desk. Gently attach the display in this orientation, ensuring the pins line up with the header.
+
+![Orientation for display](docs/assembly/a5.png)
+- Finally, take the other part of the 3D model, place it down with its base on the desk. Align the attachment pins from the top side (which we have just assembled) with the sockets from the part we put down, and push it in.
+
+This should now be ready for use. Attach by USB-C to your computer, [set up MicroPython](https://docs.sunfounder.com/projects/esp32-starter-kit/en/latest/micropython/python_start/install_micropython.html), flash the software, and attach a pair of wired headphones to the device. 
+
+Note: audio not programmed yet, I need to test the model first.
+
+### For reference, other parts rendered:
 
 The pieces used for mounting the top half of the model:
 ![render of top piece](docs/images/top_piece.png)
