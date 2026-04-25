@@ -43,7 +43,7 @@
 
 This should now be ready for use. Attach by USB-C to your computer, [set up MicroPython](https://docs.sunfounder.com/projects/esp32-starter-kit/en/latest/micropython/python_start/install_micropython.html), flash the software, and attach a pair of wired headphones to the device. 
 
-Note: audio not programmed yet, I need to test the model first.
+Note: please be careful with audio - I don't know how loud it'll be until I test the model.
 
 ### For reference, other parts rendered:
 
